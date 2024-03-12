@@ -1,6 +1,8 @@
 #staticSeaker {
     max-width: 600px;
     margin: 0 auto;
+    /*margin-top: 6000px;*/
+    /*margin-bottom: 1000px;*/
 }
 
 #searchBox {

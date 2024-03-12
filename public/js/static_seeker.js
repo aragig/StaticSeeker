@@ -30,4 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.getElementById('searchResults').innerHTML = resultsHTML;
             });
     });
+
+    document.addEventListener('keydown', function(event) {
+        // スラッシュキーが押されたとき、かつテキストフィールドやテキストエリアにフォーカスがない場合に実行
+        if (event.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+            event.preventDefault(); // ブラウザのデフォルト動作をキャンセル
+            searchBox.scrollIntoView(); // テキストフィールドがある位置までスクロール
+            searchBox.focus(); // 検索ボックスにフォーカスを設定
+        }
+    });
 });
